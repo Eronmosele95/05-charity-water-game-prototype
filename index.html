@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Game</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Water Trivia Tower - Matching Game</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the Charity Water Game Prototype</h1>
-    <script src="script.js"></script>
+  <div class="game-header">
+    <h2>Water Trivia Tower</h2>
+    <div id="timer-label" class="timer-label">1:00</div>
+    <div id="score-display" class="score-display">Score: 0</div>
+    <div id="combo-display" class="combo-display"></div>
+    <div style="margin: 10px 0;">
+  <button id="hint-btn">Hint (<span id="hint-count">2</span>)</button>
+  <button id="next-level-btn" style="display:none;">Next Level</button>
+  <button id="reset-btn">Reset</button>
+    </div>
+    <p>Tap two cards to find matching pairs!</p>
+  </div>
+  <div class="water-can-overlay">
+    <img src="img/water-can-transparent.png" alt="Water Can" class="water-can-transparent">
+  </div>
+  <div class="grid">
+    <div style="position: relative;">
+      <div class="water-can-overlay">
+        <img src="img/water-can-transparent.png" alt="Water Can" class="water-can-transparent">
+      </div>
+      <div class="grid">
+        <!-- Cards are rendered dynamically by script.js -->
+      </div>
+    </div>
+  </div>
+  <div class="logo-bottom">
+    <img src="img/cw_logo.png" alt="charity: water logo" class="cw-logo">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
